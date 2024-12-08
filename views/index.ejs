@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book store</title>
+    <link rel="icon" href="/images/logo.png" />
+    <link rel="stylesheet" href="/css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="navigate">
+      <img id="logo" src="/images/logo.png" />
+      <div style="margin-left: 20px; margin-top: 20px; display: flex">
+        <form action="/search" method="GET">
+          <input
+            type="text"
+            name="search"
+            id="search"
+            placeholder="Title, Author, Publisher or ISBN"
+            required
+          />
+          <button type="submit" id="search_icon">
+            <i class="fa fa-magnifying-glass"></i>
+          </button>
+        </form>
+      </div>
+      <ul id="margin-left">
+        <li id="books">
+          Categories <i class="fa fa-chevron-down"></i>
+          <ul id="categories">
+            <li id="values" onclick="searchBook('Fiction')">Fiction</li>
+            <li id="values" onclick="searchBook('Anime')">Anime</li>
+            <li id="values" onclick="searchBook('History')">History</li>
+            <li id="values" onclick="searchBook('Thiller')">Thiller</li>
+            <li id="values" onclick="searchBook('Horror')">Horror</li>
+            <li id="values" onclick="searchBook('Poetry')">Poetry</li>
+          </ul>
+        </li>
+        <% if(user) { %>
+        <li id="person">
+          <i class="fa fa-user"></i><span id="userName"><%=user.name%></span
+          ><i class="fa-solid fa-chevron-right"></i>
+          <ul id="dropdown">
+            <a href="profile.html"><li>My Profile</li></a>
+            <li id="logout">
+              <a href="/logout"
+                >Logout<i class="fa-solid fa-arrow-right-from-bracket"></i
+              ></a>
+            </li>
+          </ul>
+        </li>
+        <% } else { %>
+        <li>
+          <a href="/login">
+            <button type="button" id="loginbtn">Login/Sign Up</button>
+          </a>
+        </li>
+        <% } %>
+      </ul>
+    </div>
+    <div id="container">
+      <div id="welcome">
+        <div id="animate">
+          <h1>WELCOME TO BOOKSTORE!</h1>
+          <h3>"The only store you need"</h3>
+          <img src="/images/logo.png" />
+          <div id="cirlce"></div>
+        </div>
+      </div>
+    </div>
+    <div id="container1">
+      <div id="content" onclick="searchBook('Recommended')">
+        <h2>Recommended</h2>
+        <hr />
+        <p>Based on your previous searches</p>
+      </div>
+      <div id="content" onclick="searchBook('Most Popular')">
+        <h2>Popular</h2>
+        <hr />
+        <p>Most popular books</p>
+      </div>
+      <div id="content" onclick="searchBook('New Arrivals')">
+        <h2>Latest Arrivals</h2>
+        <hr />
+        <p>New Arrivals</p>
+      </div>
+    </div>
+    <div id="output-list"></div>
+  </body>
+</html>

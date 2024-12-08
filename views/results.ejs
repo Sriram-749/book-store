@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/results.css" />
+    <title>Search Results</title>
+  </head>
+  <body>
+    <a href="/index">Home</a>
+    <h1>Search Results</h1>
+
+    <% if (message) { %>
+    <p><%= message %></p>
+    <% } else { %>
+    <ul>
+      <% books.forEach((book) => { %>
+      <li>
+        <img src="<%= book.image %>" alt="<%= book.title %>" />
+        <h3>Title: <%= book.title %></h3>
+        <p>Authors: <%= book.authors %></p>
+        <p>ISBN 10: <%= book.isbn10 %></p>
+        <p>ISBN 13: <%= book.isbn13 %></p>
+        <p>Genres: <%= book.categories %></p>
+        <a href="/read/<%=book.isbn13%>">Read me</a>
+      </li>
+      <hr />
+      <% }); %>
+    </ul>
+    <% } %>
+  </body>
+</html>

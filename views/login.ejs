@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign in | Bookstore</title>
+    <link rel="stylesheet" href="/css/login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <form action="/login" method="POST">
+      <h1>Sign in</h1>
+      <div class="name">
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Email"
+          required
+        /><i class="fa fa-envelope"></i><br />
+      </div>
+      <div class="pass">
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Password"
+          required
+        /><i class="fa fa-lock"></i><br />
+      </div>
+      <p id="forgot">Forgot password?</p>
+      <button type="submit">Sign in</button>
+      <p>Don't have an account? <a href="/signup">create account</a></p>
+    </form>
+  </body>
+</html>

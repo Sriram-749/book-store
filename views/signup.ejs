@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up | Bookstore</title>
+    <link rel="stylesheet" href="/css/signup.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <form action="/signup" method="post">
+      <h1>Sign Up</h1>
+      <input
+        type="text"
+        id="fullname"
+        name="fullname"
+        placeholder="Fullname"
+        required
+      /><i class="fa fa-user"></i><br />
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Email"
+        required
+      /><i class="fa fa-envelope"></i><br />
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Password"
+        required
+      /><i class="fa fa-lock"></i><br />
+      <input
+        type="password"
+        id="cPassword"
+        name="cPassword"
+        placeholder="Confirm Password"
+        required
+      /><i class="fa fa-lock"></i><br />
+      <button type="submit">Sign Up</button>
+      <p>Already have an account? <a href="/login">Login</a></p>
+    </form>
+  </body>
+</html>

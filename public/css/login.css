@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('/images/background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+form {
+    text-align: center;
+    background: transparent;
+    padding: 60px 20px 60px 20px;
+    border: 1px solid white;
+    border-radius: 10px;
+    backdrop-filter: blur(3px);
+    font-family: sans-serif;
+    color: white;
+}
+
+form h1 {
+    color: white;
+}
+
+form input{
+    background: none;
+    border: none;
+    width: 300px;
+    border-bottom: 1px solid white;
+    margin-top: 20px;
+    margin-left: 10px;
+    font-size: 15px;
+    padding: 10px;
+    color: white;
+}
+
+form input::placeholder {
+    color: white;
+}
+
+form button {
+    margin-top: 15px;
+    padding: 13px;
+    width: 100%;
+    border-radius: 100px;
+    border: none;
+    color: white;
+    font-size: 15px;
+    background: none;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+form input:focus{
+    outline: none;
+}
+div {
+    position: relative;
+}
+.name i {
+    position: absolute;
+    right: 10px;
+    top: 30px;
+}
+.pass i {
+    position: absolute;
+    right: 11px;
+    top: 30px;
+}
+form button:hover {
+    border: 1px solid rgb(0, 118, 134);
+    background-color: rgb(0, 118, 134);
+    box-shadow: 0 0 40px rgb(40, 230, 255);
+    transition: background-color 0.5s, box-shadow 0.5s;
+}
+
+p {
+    text-align: left;
+    margin: 15px 0 0 12px;
+}
+
+#forgot:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+form p a {
+    color: white;
+}
